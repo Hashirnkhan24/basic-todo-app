@@ -20,22 +20,29 @@ export function CreateTodo() {
         .catch((error) => console.log("error adding data", error))
     }
     return (
-        <div>
-            <input 
-                type="text" 
-                placeholder="title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}>
-            </input>
-            <br />
-            <input 
-                type="text" 
-                placeholder="description"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}>
-            </input><br />
-
-            <button onClick={handleAddTodo}>Add a todo</button>
-        </div>
+        <div className="my-4 p-4 bg-white rounded-lg shadow-md">
+      <input
+        type="text"
+        placeholder="Title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        className="border border-gray-300 px-3 py-2 mb-2 w-full rounded-md focus:outline-none focus:border-blue-500"
+      />
+      <br />
+      <input
+        type="text"
+        placeholder="Description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+        className="border border-gray-300 px-3 py-2 mb-2 w-full rounded-md focus:outline-none focus:border-blue-500"
+      />
+      <br />
+      <button
+        onClick={handleAddTodo}
+        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+      >
+        Add Todo
+      </button>
+    </div>
     )
 }

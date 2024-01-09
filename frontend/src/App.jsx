@@ -14,9 +14,12 @@ function App() {
   // })
   return (
     <>
-    <div>
-      <CreateTodo />
-      <Todos todos={todos}/>
+    <div className="flex items-center justify-center min-h-screen bg-slate-900">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 className="text-2xl font-semibold text-gray-800 mb-4">Add Todo Here</h1>
+        <CreateTodo />
+        <Todos todos={todos} />
+      </div>
     </div>
     </>
   )
